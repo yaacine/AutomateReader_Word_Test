@@ -21,10 +21,6 @@ public class Automate {
             return;
         }
 
-        if(!transVerif(I))
-        {
-            System.out.println("erreur dans les transitions");
-        }
 
         this.alphabet=alph;
         this.s=s;
@@ -35,7 +31,7 @@ public class Automate {
 
 
 
-
+// cette fonction n'est pas utile pour le moment , peut etre pour d'autres ameloirations
 
     public boolean transVerif(ArrayList<Transition> t) // verifier que les etats de chaque transitions sont inclus dans s
     {

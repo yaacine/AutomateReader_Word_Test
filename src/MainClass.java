@@ -14,10 +14,15 @@ public class MainClass {
 
     public static void main(String[] args) {
 
+        String w1;
         Automate a ;
-        System.out.println("je suis zidelmal yacine");
         a= Read_Automate();
-        boolean result =word_Test("ba",a);
+
+        System.out.println("Introduir le mot a teser :");
+        Scanner in1= new Scanner(System.in);
+        w1= in1.nextLine();
+
+        boolean result =word_Test(w1,a);
 
         if (result)
         {
@@ -48,7 +53,9 @@ public class MainClass {
         ArrayList<Transition> I= new ArrayList<>(); //liste des transitions de l'automate
 
 
-
+        System.out.println("###############################################");
+        System.out.println("      Debut de definition de l'automate       ");
+        System.out.println("############################################### \n");
 
         System.out.println("Quel est l nombre d'etat de votre automate ?");
         Scanner in = new Scanner(System.in);
@@ -153,7 +160,6 @@ public class MainClass {
             {
                 pile.push(actualState);
                 actualState = A.getI().get(j).getFinalState(); // passer à l'état suivant
-                System.out.println("actual state = "+actualState);
                 j=0;
                 stop=false;
             }
